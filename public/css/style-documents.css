@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* CSS reset to remove default padding/margin on elements */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-image: radial-gradient(
+    circle at 84.69% 8.66%,
+    #4a464c 0,
+    #332941 25%,
+    #180035 50%,
+    #17002b 75%,
+    #130024 100%
+  );
+}
+
+.nav-item {
+  max-width: 15%;
+}
+
+.nav-item:hover {
+  color: rgb(190, 190, 190);
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
+#logo {
+  width: 10vw;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+#back-to-products {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  right: 200px;
+}
+
+#back-to-products:hover {
+  color: #bd9cfa;
+}
+
+/* Center the content of document-card */
+.document-card {
+  width: 480px;
+  height: 550px;
+  background: #bd9cfa;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius: 10%;
+  opacity: 0.8;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horizontally center the elements */
+  transform: translate(-50%, -50%);
+}
+
+.h3 {
+  position: relative;
+  margin-top: 0px;
+}
+
+/* Style for the file input containers */
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  /* max-width: calc(
+    100% - 40px
+  );  */
+  margin-bottom: 15px;
+}
+
+/* Style for the file input labels */
+.file-input-label {
+  width: 100%; /* Set a fixed width for the labels to make them equal */
+  background-color: #01657ed1;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.file-input-label:hover {
+  background-color: #18aacfd1;
+}
+
+/* Hide the default file input styles */
+input[type="file"] {
+  display: none;
+}
+
+/* Center the submit button */
+#submit-btn {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  align-self: center;
+  transform: translate(175%);
+}
+
+#submit-btn:hover {
+  background-color: #007bffac;
+}
+
+#submit-btn:disabled {
+  background-color: grey;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
