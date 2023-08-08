@@ -10,6 +10,8 @@ import { docsUsers } from "../../controllers/api/users/controller.post.docsusers
 import { extractorMulter } from "../../mid/extractor.js";
 import { photoUsers } from "../../controllers/api/users/controller.post.photousers.js";
 import { docCheck } from "../../mid/doccheck.js";
+import { deleteOneUserController } from "../../controllers/api/users/controller.deleteoneusers.js";
+import { deleteAllUserController } from "../../controllers/api/users/controller.deleteallusers.js";
 
 export const usersRouter = Router();
 
@@ -44,7 +46,17 @@ usersRouter.post(
 );
 
 //borrar uno
-usersRouter.delete("/:uid", authJwtApi, soloRol("super-admin"));
+usersRouter.delete(
+  "/:uid",
+  authJwtApi,
+  soloRol("super-admin"),
+  deleteOneUserController
+);
 
 //borrar por inactivida
-usersRouter.delete("/", authJwtApi, soloRol("super-admin"));
+usersRouter.delete(
+  "/",
+  authJwtApi,
+  soloRol("super-admin"),
+  deleteAllUserController
+);

@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { ErrorNotFound } from "../../mid/errors.class";
+import { ErrorNotFound } from "../../models/error/errors.model.js"
 
 export default class ProductManager {
   #path;

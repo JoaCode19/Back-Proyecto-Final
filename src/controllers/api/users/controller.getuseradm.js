@@ -1,3 +1,4 @@
+import Dtoclose from "../../../models/entities/dtoUsers.model.js";
 import {
   ErrorInvalidArgument,
   ErrorPermissions,
@@ -18,8 +19,12 @@ export async function getUsersAdm(req, res, next) {
         throw new ErrorPermissions("Incomplete Documentation");
       userRole = await userRepository.updateOne(user.id, { role: "admin" });
     }
-
-    res.json(userRole);
+    const usrs = await userRepository.findMany();
+    const users = usrs.map((usr) => {
+      const dtocloseData = new Dtoclose(usr).dtoclose();
+      return dtocloseData;
+    });
+    res.status(200).json(userRole);
   } catch (error) {
     next(error);
   }

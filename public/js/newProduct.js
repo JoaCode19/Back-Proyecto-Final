@@ -42,7 +42,7 @@ if (
       thumbnail: inputThumbnail.value,
       owner: profile.value,
     };
-
+    //Crea
     if (!inputId.value) {
       const { status } = await fetch("api/products", {
         method: "POST",
@@ -75,9 +75,19 @@ if (
         });
       }
     } else {
+      const datau = {
+        code: inputCode.value,
+        title: inputTitle.value,
+        description: inputDescription.value,
+        category: selectCategory.value,
+        stock: inputStock.value,
+        price: inputPrice.value,
+        thumbnail: inputThumbnail.value,
+      };
+
       const { status } = await fetch(`api/products/${inputId.value}`, {
         method: "PUT",
-        body: JSON.stringify(data),
+        body: JSON.stringify(datau),
         headers: { "Content-Type": "application/json" },
       });
 
@@ -111,6 +121,7 @@ if (
 
 //SERCH
 async function SerchProduct(code, owner) {
+  console.log(code + owner);
   event?.preventDefault;
   const FETCH_URL = `http://localhost:8080/api/products/code/${code}?owner=${owner}`;
   await fetch(FETCH_URL, {
@@ -180,7 +191,7 @@ async function SerchProduct(code, owner) {
 //DELETE
 async function delProduct(id, owner) {
   event?.preventDefault;
-  const FETCH_URL = `http://localhost:8080/api/products/${id}`;
+  const FETCH_URL = `http://localhost:8080/api/products/${id}?owner=${owner}`;
   const { status } = await fetch(FETCH_URL, { method: "DELETE" });
   if (status === 204) {
     // @ts-ignore

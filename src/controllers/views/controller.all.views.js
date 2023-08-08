@@ -137,6 +137,10 @@ export async function ticketView(req, res, next) {
 }
 
 export async function loginView(req, res) {
+  res.clearCookie("jwt_authorization", {
+    signed: true,
+    httpOnly: true,
+  });
   res.render(PATH_LOGIN, {
     style: "style-login",
     faviconTitle: "Login",
@@ -144,6 +148,10 @@ export async function loginView(req, res) {
 }
 
 export async function regisView(req, res) {
+  res.clearCookie("jwt_authorization", {
+    signed: true,
+    httpOnly: true,
+  });
   res.render(PATH_REGIS, {
     style: "style-register",
     faviconTitle: "Regis",
@@ -223,7 +231,6 @@ export async function usersView(req, res, next) {
     const dtocloseData = new Dtoclose(usr).dtoclose();
     return dtocloseData;
   });
-  console.log(users.length > 0);
   try {
     res.render("users", {
       style: "style-users",
@@ -231,10 +238,8 @@ export async function usersView(req, res, next) {
       anyUsers: users.length > 0,
       list: users,
     });
-    console.log(users);
   } catch (error) {
     req.logger.error(`invalid user view${error.message}`);
-    console.log(error);
     return next(error);
   }
 }

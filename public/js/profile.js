@@ -1,5 +1,3 @@
-// import { io } from "../../src/app/server";
-
 // @ts-ignore
 const serverSocket = io();
 
@@ -31,7 +29,6 @@ if (imageUploadInput instanceof HTMLInputElement) {
           color: "#fff",
           confirmButtonColor: "#01657ed1",
         });
-        // window.location.href = `/profile/${uid}`;
       } else {
         // @ts-ignore
         Swal.fire({

@@ -28,3 +28,38 @@
 {"level":"error","message":"post product fail "}
 {"level":"error","message":{"estado":"error","tipo":"INVALID_ARGUMENT"}}
 {"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Incomplete Documentation","estado":"error","tipo":"PERMISSIONS_ERROR"}}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":"get product by code fail "}
+{"level":"error","message":{"description":"Product could be edit or delete by owner","estado":"error","tipo":"PERMISSIONS_ERROR"}}
+{"level":"error","message":"get product by code fail "}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":"delete product fail "}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":"delete product fail "}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":"delete product fail "}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":"get product by code fail "}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":"delete product fail No recipients defined"}
+{"level":"error","message":{"estado":"error"}}
+{"level":"error","message":"put product fail "}
+{"level":"error","message":{"description":"NOT FOUND","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":"put product fail "}
+{"level":"error","message":{"description":"NOT FOUND","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":"get product by code fail "}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
