@@ -1,0 +1,67 @@
+<header>
+  <nav class="nav-container">
+    <ul class="nav-list" id="lista">
+      <li class="nav-item">
+        <a href="/users?limit=10&page=1" id="cartref">
+          <img
+            src="../public/img/Astros-nav.png"
+            alt="logo"
+            class="logo-image"
+            id="logo"
+          />
+        </a>
+      </li>
+      <li class="nav-item btn">
+        <a href="/users?limit=10&page=1" id="back-to-users" onclick="deleteAllUsers()">
+          <i class="fa-solid fa-clock"></i>
+        </a>
+      </li>
+      <li class="nav-item btn">
+        <a href="/users?limit=10&page=1" id="back-to-users">
+          <i class="fa-solid fa-backward"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<br />
+{{#if anyUsers}}
+  <div class="user-list">
+    {{#each list}}
+      <div class="user-container">
+        <div class="user-row">
+          <img class="img-profile" src="{{this.photo}}" alt="Usuario" />
+          <p class="p-name">
+            {{this.first_name}}
+            {{this.last_name}}
+          </p>
+        </div>
+        <p class="p-email">
+          {{this.email}}
+        </p>
+        <p class="p-role">
+          {{this.role}}
+        </p>
+        <p class="p-last">
+          {{this.last_connection}}
+        </p>
+        <div class="icons">
+          <button
+        class="btncrud deleter"
+        onclick="deleteUser(this.dataset.userid)"
+        type="button"
+        data-userid={{this.id}}
+      ><i class="fa-solid fa-trash"></i></button>
+          <button
+        class="btncrud upgrader"
+        onclick="upgradeUser(this.dataset.userid)"
+        type="button"
+        data-userid={{this.id}}
+      ></i></button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p class="">the user gallery is empty</p>
+{{/if}}

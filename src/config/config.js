@@ -62,6 +62,7 @@ const PATH_FORGOT = process.env.PATH_FORGOT;
 const PATH_RECOVER = process.env.PATH_RECOVER;
 const PATH_PROFILE = process.env.PATH_PROFILE;
 const PATH_DOCUMENTS = process.env.PATH_DOCUMENTS;
+const PATH_USERS = process.env.PATH_USERS;
 
 export {
   NODE_ENV,
@@ -85,4 +86,5 @@ export {
   PATH_RECOVER,
   PATH_PROFILE,
   PATH_DOCUMENTS,
+  PATH_USERS,
 };

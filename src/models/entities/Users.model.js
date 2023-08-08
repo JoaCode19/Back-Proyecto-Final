@@ -187,14 +187,5 @@ export default class Users {
     };
   }
 
-  dtoclose() {
-    return {
-      email: this.#email,
-      first_name: this.#first_name,
-      last_name: this.#last_name,
-      age: this.#age,
-      role: this.#role,
-      last_connection: this.#last_connection,
-    };
-  }
+ 
 }

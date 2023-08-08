@@ -11,6 +11,7 @@ import {
   recoverView,
   regisView,
   ticketView,
+  usersView,
 } from "../../controllers/views/controller.all.views.js";
 import { authJwtView } from "../../mid/authentication.js";
 import { soloRol } from "../../mid/authorization.js";
@@ -58,3 +59,7 @@ viewsRouter.get("/profile/:uid", authJwtView, profileView);
 //documents view
 
 viewsRouter.get("/documents/:uid", authJwtView, documentsView);
+
+//getusers view
+
+viewsRouter.get("/users", authJwtView, usersView);

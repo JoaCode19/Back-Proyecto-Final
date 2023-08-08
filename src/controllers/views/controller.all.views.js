@@ -4,6 +4,7 @@ import { productsRepository } from "../../repositories/product.repositorie.js";
 import { cartRepository } from "../../repositories/cart.repositrie.js";
 import Handlebars from "handlebars";
 import jwt from "jsonwebtoken";
+import Dtoclose from "../../models/entities/dtoUsers.model.js";
 
 import {
   PATH_NEW_PRODUCT,
@@ -18,6 +19,7 @@ import {
   JWT_PRIVATE_KEY,
   PATH_PROFILE,
   PATH_DOCUMENTS,
+  PATH_USERS,
 } from "../../config/config.js";
 import { userRepository } from "../../repositories/users.repository.js";
 
@@ -211,6 +213,28 @@ export async function documentsView(req, res, next) {
     });
   } catch (error) {
     req.logger.error(`invalid documents view${error.message}`);
+    return next(error);
+  }
+}
+
+export async function usersView(req, res, next) {
+  const usrs = await userRepository.findMany();
+  const users = usrs.map((usr) => {
+    const dtocloseData = new Dtoclose(usr).dtoclose();
+    return dtocloseData;
+  });
+  console.log(users.length > 0);
+  try {
+    res.render("users", {
+      style: "style-users",
+      faviconTitle: "Users",
+      anyUsers: users.length > 0,
+      list: users,
+    });
+    console.log(users);
+  } catch (error) {
+    req.logger.error(`invalid user view${error.message}`);
+    console.log(error);
     return next(error);
   }
 }

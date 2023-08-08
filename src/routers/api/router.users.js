@@ -13,11 +13,19 @@ import { docCheck } from "../../mid/doccheck.js";
 
 export const usersRouter = Router();
 
+//creacion
 usersRouter.post("/", postUsuarios);
+//obtener todos api
 usersRouter.get("/", authJwtApi, soloRol("super-admin"), getUsersController);
+
+//recupero password
 usersRouter.post("/forgot", postUsersForgot);
 usersRouter.post("/recover", postUsersRecover);
+
+//cambio de rol
 usersRouter.get("/admin/:uid", authJwtApi, soloRol("super-admin"), getUsersAdm);
+
+//extrae docs
 usersRouter.post(
   "/documents/:uid",
   docCheck,
@@ -28,8 +36,15 @@ usersRouter.post(
   ]),
   docsUsers
 );
+//extrae photo
 usersRouter.post(
   "/profile/:uid",
   extractorMulter("assets/profile", [{ name: "photo" }]),
   photoUsers
 );
+
+//borrar uno
+usersRouter.delete("/:uid", authJwtApi, soloRol("super-admin"));
+
+//borrar por inactivida
+usersRouter.delete("/", authJwtApi, soloRol("super-admin"));
