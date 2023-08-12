@@ -7,7 +7,7 @@ export async function putPrdCart(req, res, next) {
       req.params.cid,
       req.params.pid,
       req.body.quantity,
-      req.bdoy
+      req.body
     );
     res.json(productupd);
   } catch (error) {

@@ -193,3 +193,13 @@ strong {
   margin-right: 1.5rem;
   gap: 0.5rem;
 }
+
+.btncrud:hover {
+  color: #01657ed1;
+  cursor: pointer;
+}
+
+#delete-time:hover {
+  color: #bd9cfa;
+  transform: scale(1.3);
+}

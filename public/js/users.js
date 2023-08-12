@@ -93,3 +93,8 @@ async function deleteAllUsers() {
     });
   }
 }
+
+// @ts-ignore
+tippy("#delete-time", { content: "Delete inactive users" });
+// @ts-ignore
+tippy(".upgrader", { content: "Change role", placement: "top" });

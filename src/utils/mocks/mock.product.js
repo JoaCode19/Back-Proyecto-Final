@@ -20,6 +20,7 @@ export async function moackingProducts() {
         "OTROS",
         "PERLITAS",
       ]),
+      owner: "super-admin",
     });
 
     mockingProducts.push(product.dto());

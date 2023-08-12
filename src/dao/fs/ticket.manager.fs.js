@@ -1,3 +1,3 @@
-//en contruccion
+import { DaoFs } from "./defaultDaofs.js";
 
-export const tm = [];
+export const tm = new DaoFs("./src/database/tickets.json", "Ticket");

@@ -43,4 +43,3 @@ if (profileIcon instanceof HTMLElement && profileMenu instanceof HTMLElement) {
 } else {
   console.error("No se encontraron los elementos necesarios.");
 }
-

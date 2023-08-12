@@ -5,9 +5,7 @@ import { ticketsRepository } from "../repositories/ticket.repository.js";
 import { userRepository } from "../repositories/users.repository.js";
 
 class PurcheaseService {
-  constructor(repositorie) {
-    this.repositorie = repositorie;
-  }
+  constructor() {}
 
   async createTicket(data) {
     const productsInCart = await cartRepository.getProductsInCartById(
@@ -32,6 +30,9 @@ class PurcheaseService {
     const dataticket = new Tickets(info_tikcet);
     const ticket = await ticketsRepository.add(dataticket.dto());
     await this.adjustStock(data);
+    if (process.env.PERSISTENCIA !== "mongoose") {
+      await cartRepository.delAllProductsInCart(data.cart);
+    }
     return ticket;
   }
 
@@ -40,11 +41,17 @@ class PurcheaseService {
       data.cart
     );
     for (const prod of productsStocker) {
-      await productsRepository.updateOne(prod.product.id, {
-        $inc: { stock: -prod.quantity },
-      });
+      if (process.env.PERSISTENCIA !== "mongoose") {
+        await productsRepository.updateOne(prod.product.id, {
+          stock: prod.product.stock - prod.quantity,
+        });
+      } else {
+        await productsRepository.updateOne(prod.product.id, {
+          $inc: { stock: -prod.quantity },
+        });
+      }
     }
   }
 }
 
-export const ticketService = new PurcheaseService(ticketsRepository);
+export const ticketService = new PurcheaseService();

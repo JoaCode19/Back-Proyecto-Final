@@ -8,7 +8,9 @@
     "start": "node .",
     "start:dev": "nodemon -e js,html,handlebars,css,yaml .",
     "start:prod": "NODE_ENV=production node .",
-    "test": "MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test nodemon --exec mocha --recursive"
+    "test": "MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test nodemon --exec mocha --recursive",
+    "start:prodwin": "cross-env NODE_ENV=production node .",
+    "testwin": "cross-env MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test nodemon --exec mocha --recursive"
   },
   "keywords": [],
   "author": "",
@@ -42,6 +44,7 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/mocha": "^10.0.1",
+    "cross-env": "^7.0.3",
     "supertest": "^6.3.3"
   },
   "mocha": {

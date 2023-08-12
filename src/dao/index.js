@@ -18,6 +18,8 @@ if (PERSISTENCIA === "mongoose") {
   userDao = um;
   const { pm } = await import("./fs/product.manager.fs.js");
   productDao = pm;
+  const { cm } = await import("./fs/cart.manager.fs.js");
+  cartDao = cm;
   const { tm } = await import("./fs/ticket.manager.fs.js");
   ticketDao = tm;
 }

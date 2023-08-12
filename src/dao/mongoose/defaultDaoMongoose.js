@@ -46,7 +46,6 @@ export class DaoMongoose {
     return serched;
   }
 
-  //if you want to read all condition={}
   async findMany(condition) {
     const serched = await this.#modelDb
       .find(condition)

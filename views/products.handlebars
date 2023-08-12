@@ -17,7 +17,7 @@
       {{#if role}}
        <li class="nav-item btn"><a href="/newproducts" class="add-btn" id="addref"><i class="fa-solid fa-shirt"></i></a></li>
       {{/if}}
-      <li class="nav-item btn"><a href="/carts/{{this.cart}}" class="cart-btn" id="cartref"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      <li class="nav-item btn"><a href="/carts/{{this.cart}}" class="cart-btn" id="cartref" data-tippy-content="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
       <li class="nav-item btn"><a href="#" class="profile-btn" id="profile"><i class="fa-solid fa-user"></i></a><!-- Menú desplegable -->
       <ul class="dropdown-menu" id="profileMenu">
         <li><a href="/profile/{{uid}}" id="myprofile">Profile</a></li>
@@ -124,3 +124,5 @@
 
 <script src="/public/js/product.js"></script>
 <script src="/public/js/logout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.1/tippy.all.min.js" integrity="sha512-NsiYiJ86BHeVbSzIzt35rQOwBdX9VC5qOUC2peSbnzad0Ae9mX4zt+wx9rH0uJrLrjtltOlLCCZPemf6O6pl0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+

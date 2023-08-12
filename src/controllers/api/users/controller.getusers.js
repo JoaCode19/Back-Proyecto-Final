@@ -8,7 +8,7 @@ export async function getUsersController(req, res, next) {
     const dtocloseUsers = users.map((usr) => {
       const dtocloseData = new DtoClose(usr).dtoclose();
       return dtocloseData;
-    });
+    })
     res.json(dtocloseUsers);
   } catch (error) {
     next(error);

@@ -146,6 +146,8 @@ export function anthGithub_CB(req, res, next) {
 }
 
 export function authJwtApi(req, res, next) {
+  if (process.env.PERSISTECIA !== "mongoose") return next();
+
   passport.authenticate("jwt", (error, jwt_payload, info) => {
     if (error || !jwt_payload) return next(new ErrorAuthothentication());
     req.user = jwt_payload;
