@@ -1,6 +1,6 @@
 import { cartRepository } from "../repositories/cart.repositrie.js";
 import Users from "../models/entities/Users.model.js";
-import Carts from "../models/entities/Carts.model.js";
+import Carts from "../models/entities/carts.model.js";
 import { userRepository } from "../repositories/users.repository.js";
 
 class UserService {
