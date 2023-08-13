@@ -4,7 +4,7 @@ export async function getProductsController(req, res, next) {
   req.logger.http("inside get products");
   if (process.env.PERSISTENCIA === "mongoose") {
     try {
-      const urlsrt = `http://localhost:8080${req.originalUrl}`;
+      const urlsrt = `https://back-proyecto-final-production-bee0.up.railway.app${req.originalUrl}`;
       const result = await productsRepository.getPaginatedElements(
         req.query,
         urlsrt

@@ -123,7 +123,7 @@ if (
 async function SerchProduct(code, owner) {
   console.log(code + owner);
   event?.preventDefault;
-  const FETCH_URL = `http://localhost:8080/api/products/code/${code}?owner=${owner}`;
+  const FETCH_URL = `https://back-proyecto-final-production-bee0.up.railway.app/api/products/code/${code}?owner=${owner}`;
   await fetch(FETCH_URL, {
     method: "GET",
     // body: JSON.stringify({ owner: owner }),
@@ -191,7 +191,7 @@ async function SerchProduct(code, owner) {
 //DELETE
 async function delProduct(id, owner) {
   event?.preventDefault;
-  const FETCH_URL = `http://localhost:8080/api/products/${id}?owner=${owner}`;
+  const FETCH_URL = `https://back-proyecto-final-production-bee0.up.railway.app/api/products/${id}?owner=${owner}`;
   const { status } = await fetch(FETCH_URL, { method: "DELETE" });
   if (status === 204) {
     // @ts-ignore

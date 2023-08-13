@@ -57,7 +57,7 @@ export async function newProductView(req, res, next) {
 
 export async function productView(req, res, next) {
   try {
-    const urlsrt = `http://localhost:8080${req.originalUrl}`;
+    const urlsrt = `https://back-proyecto-final-production-bee0.up.railway.app${req.originalUrl}`;
     const products = await productsRepository.getPaginatedElements(
       req.query,
       urlsrt

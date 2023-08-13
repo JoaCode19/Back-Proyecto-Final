@@ -18,7 +18,7 @@ Bienvenido a la experiencia Astros: esta es un E-Comerce pensado para uso de un 
 
 ## Pruebas
 
-http://localhost:8080/
+https://back-proyecto-final-production-bee0.up.railway.app/
 
 dadas las mejoras propuestas en la interfaz de usuario en esta ocasión se recomienda hacer las pruebas directamente desde la web.
 

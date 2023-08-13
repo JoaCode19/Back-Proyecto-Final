@@ -1,7 +1,7 @@
 async function payOrder(cid) {
   const cidarr = cid.split("carts/");
   const cidt = cidarr[1];
-  const FETCH_URL = `http://localhost:8080/api/tickets`;
+  const FETCH_URL = `https://back-proyecto-final-production-bee0.up.railway.app/api/tickets`;
   await fetch(FETCH_URL, {
     method: "POST",
     body: JSON.stringify({ cart: cidt }),
