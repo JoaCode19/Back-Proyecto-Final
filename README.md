@@ -1,26 +1,87 @@
-# Curso de Backend (Mongo,Express,Node js)
-
-## Astros _trabajo final_
+# Curso de Backend en Coderhouse - Astros
 
 ## Abstract
 
-Bienvenido a la experiencia Astros: esta es un E-Comerce pensado para uso de un showroom deportivo
+Este proyecto es el resultado final del curso de backend con Node.js en Coderhouse.El mismo consiste en la implementación de un backend para una plataforma de comercio electrónico utilizando Node.js y a partir de la creación de una API REST. La experiencia Astros es un E-Commerce esta pensada para funcionar como un e-showroom deportivo.
 
-## Notas de versión (Desafio 7)
+## Librerias
 
-- 1_Pasport,Mejora en autenticaciones y autorizaciones
-- 2_Restructuracion del manejo de session con Passport
-- 3_Autenticación por terceros
-- 4_Sweet Alerts para cada una de las acciones que ameriten.
-- 5_Roles de usuario definidos
-- 6_JWT y manejo de cookies httpOnly,Permisología
-- 7_Btn solo visible en el perfil admin con redirec a la carga y edición de productos
+**Servidor:**
 
-## Pruebas
+- express
+- handlebars
+- dotenv
 
-https://back-proyecto-final-production-bee0.up.railway.app/
+**Autenticación y autorización:**
 
-dadas las mejoras propuestas en la interfaz de usuario en esta ocasión se recomienda hacer las pruebas directamente desde la web.
+- passport
+- cookie-parser
+- jsonwebtoken
+
+**BBDD:**
+
+- mongoose
+- mongoose-paginate-v2
+
+**Validaciones y encriptado:**
+
+- crypto
+- bcrypt
+
+**Documentación:**
+
+- swagger
+
+**Mailing:**
+
+- nodemailer
+
+**Testing:**
+
+- mocha
+
+**Otras utilidades:**
+
+- socket.io
+- nodemon
+- winston
+- multer
+- faker
+
+## Api Rest Documentacion
+
+Puede acceder a la documentación de los endpoints en la ruta "/api/docs" del proyecto de Curso de Backend en Coderhouse.
+
+## Detalles de uso
+
+**Scripts:**
+
+En el proyecto de Curso de Backend en Coderhouse:
+
+- `npm start`: Inicia el servidor usando node.
+- `npm run start:dev`: Inicia el servidor en modo de desarrollo utilizando nodemon vigilado los siguientes tipo de archiv js,html,handlebars,css,yaml.
+- `test`: Inicia el servidor en modo test haciando uso de nodemon + mocha recursivo y cargando la variable de entorno que setea la base de datos en MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test.
+- `npm run start:prodwin`: Adaptacion del homonimo(sacando el win) con la herramienta cross-env para manejar introduccion de variables de entorno en windows.
+- `npm run testwin`: Adaptacion del homonimo(sacando el win) con la herramienta cross-env para manejar introduccion de variables de entorno en windows.
+
+**ENTORNO**
+
+Para el manejo de variabales de entorno utilizamos un archivo .env ubicado en "src/config", el mismo cuenta con las siguientes variables preestablecidas y necesarias para el correcto funcionamiento:
+
+### //config
+
+PERSISTENCIA=mongoose
+COOKIE_KEY=xxxx
+MONGODB_CNX_STR=mongodb+srv://xxxxxxx@cluster0.tmp8a5p.mongodb.net/E-comerce?retryWrites=true&w=majority
+PORT=xxxx
+SESSION_SECRET=xxxxxx
+
+### //email
+
+EMAIL_USER=xxxx
+EMAIL_PASS=xxxx
+TEST_EMAIL_USER=xxxx
+TEST_EMAIL_PASS=xxxx
 
 ## Next update
 
@@ -31,6 +92,6 @@ En interfaz visual: Real time products (reutilizando lo hecho con socket.io prev
 - [Instagram](https://www.instagram.com/joabidart/)
 - [LinkedIn](https://www.linkedin.com/in/joaquin-bidart-33561918a/)
 
-### Este proyecto - version
+### Deploy
 
-- [Repo](https://github.com/JoaCode19/Desafio7)
+- [web](https://back-proyecto-final-production-bee0.up.railway.app/)
